@@ -1,15 +1,9 @@
 "use strict";
 
-//const prompt = require("prompt-sync")();
-
-//let initAmount = prompt("Please enter initial amount: ");
-//let annualRate = prompt("Please enter annual interest rate (%): ");
-//let numberOfYear = prompt("Please enter number of year: ");
-
 function compoundInterest(Amount, Rate, Years) {
-    let compoundOfYear = 0;
+    let compoundOfYear = Amount;
     for (let i = 1; i <= Years; i++) {
-        compoundOfYear = Amount * (Rate/100);
+        compoundOfYear = compoundOfYear * ( 1+ Rate/100);
     }
     return compoundOfYear;
 }
