@@ -29,5 +29,5 @@ console.log("Expect 10: ", sumDigits(1234) );
 console.log("Expect 24: ", multiDigits(1234) );
 console.log("Expect 3: ", sumDigits(102) );
 console.log("Expect 0: ", multiDigits(102) );
-console.log("Expect 8: ", sumDigits(0) );
-console.log("Expect 8: ", multiDigits(111011) );
+console.log("Expect 8: ", sumDigits(8) );
+console.log("Expect 8: ", multiDigits(8) );
