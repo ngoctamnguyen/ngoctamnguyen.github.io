@@ -1,5 +1,5 @@
 "use strict";
-module.exports = {};
+module.exports = {compoundInterest};
 
 /**
  * @param {Amount} is the start money
