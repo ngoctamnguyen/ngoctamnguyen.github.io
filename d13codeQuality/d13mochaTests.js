@@ -6,7 +6,6 @@ const assert = require("assert");
 
 /* import from computeSalesCommission.js */
 const functionsModule = require("./computeSalesCommission.js");
-
 const computeSalesCommission = functionsModule.computeSalesCommission;
 
 describe("test of ComputSalesCommission", function(){
