@@ -138,3 +138,22 @@ function generateArray(numOfArr, numOfElement) {
     }
     return newArr;
 }
+
+/*
+function generateArray(row,colomun){
+   let multiArray = [];
+   let value = 1 ;
+
+   for(let i=0;i<row;i++){
+       let arr =[];
+       for(let j =0;j<colomun;j++){
+          arr.push(value);
+          value++;
+       }
+       multiArray.push(arr);
+   }
+   
+   return multiArray;
+
+}
+*/
