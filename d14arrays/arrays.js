@@ -12,7 +12,14 @@ module.exports = {maxOfThree, sum, multiply }; //add all of your function names 
  * @returns {number} largest of a, b, c
  */
 function maxOfThree(a, b, c){ 
-    return c;
+    let max = a
+    if (max < b) {
+        max = b;
+    }
+    if (max < c) {
+        max = c;
+    }
+    return max;
 }
 
 /**
@@ -36,7 +43,98 @@ function sum(arr){
  */
 function multiply(arr){
     let tot = 1;
-
+    for (const number of arr){
+        tot *= number;
+    }
     return tot;
 
+}
+
+/**
+ * 
+ * @param {Array} array of words
+ * @returns {number} longest word 
+ */
+
+function findLongestWord(arr) {
+    let longest = 0;
+    for (const word of arr) {
+        if (word.length > longest) {
+            longest = word.length;
+        }
+    }
+    return longest;
+}
+
+/**
+ * 
+ * @param {Array} array of elements
+ * @returns {Array} new array contained reverted of elements
+ */
+function reverseArray(arr) {
+    let newArr = [];
+    for (let i = arr.length-1; i >=0; i--) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
+}
+
+/**
+ * 
+ * @param {Array} array of elements
+ * @returns {Array} reverted of elements in old array
+ */
+function reverseArrayInPlac(arr) {
+    let swap = '';
+    let lastIndex = arr.length-1;
+    let middle = Math.floor(arr.length/2);
+    for (let i = 0; i < middle; i++) {
+        swap = arr[i];
+        arr[i] = arr[lastIndex - i];
+        arr[lastIndex - i] = swap;
+    }
+    return arr;
+}
+
+/**
+ * 
+ * @param {Array} array of students answer
+ *  @param {Array} array of correct answer
+ * @returns {Array} array of number correct answers of each student
+ */
+
+function scoreExams(studentAnswers, correctAnswers) {
+    let scores = [];
+    let count = 0;
+    for (let i = 0; i < studentAnswers.length; i++) {
+        count = 0;
+        for (let j = 0; j < studentAnswers[i].length; j++) {
+            if (correctAnswers[j] == studentAnswers[i][j] ) {
+                count = count + 1;
+            }
+        }
+        scores.push(count);
+    }
+    return scores;
+}
+
+
+/**
+ * 
+ * @param {number} number of inside array
+ *  @param {number} number of element in each inside array
+ * @returns {Array} 2 dimension array of increasing number
+ */
+
+function generateArray(numOfArr, numOfElement) {
+    let newArr = [];
+    let count = 1;
+    for (let i = 0; i < numOfArr; i++) {
+        newArr[i] = [];
+        for ( let j = 0; j < numOfElement; j ++) {
+            newArr[i][j] = count;
+            count += 1;
+        }
+    }
+    return newArr;
 }
