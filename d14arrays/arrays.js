@@ -84,7 +84,7 @@ function reverseArray(arr) {
  * @param {Array} array of elements
  * @returns {Array} reverted of elements in old array
  */
-function reverseArrayInPlac(arr) {
+function reverseArrayInPlace(arr) {
     let swap = '';
     let lastIndex = arr.length-1;
     let middle = Math.floor(arr.length/2);
