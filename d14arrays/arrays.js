@@ -123,7 +123,7 @@ function scoreExams(studentAnswers, correctAnswers) {
  * 
  * @param {number} number of inside array
  *  @param {number} number of element in each inside array
- * @returns {Array} 2 dimension array of increasing number
+ * @returns {Array} 2 dimension array of increasing numbers
  */
 
 function generateArray(numOfArr, numOfElement) {
