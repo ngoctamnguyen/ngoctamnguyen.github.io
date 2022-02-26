@@ -2,13 +2,18 @@
 
 /* You need the assert and function name declarations to test in node.  
 Comment these out when you send it to the browser with the index.html mocha setup page.
+If use web mocha, we ignore this declaration
 */
 // const assert = require("assert");  //always need this with node
 // const myExports = require("./arrays.js");  //with node need the name of your file with your functions here
 // const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
 // const multiply = myExports.multiply;
 // const sum = myExports.sum;
-
+// const findLongestWord = myExports.findLongestWord;
+// const reverseArray = myExports.reverseArray;
+// const reverseArrayInPlace = myExports.reverseArrayInPlace;
+// const scoreExams = myExports.scoreExams;
+// const generateArray = myExports.generateArray;
 
 
 
