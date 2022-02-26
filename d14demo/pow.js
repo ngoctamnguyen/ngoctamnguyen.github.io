@@ -13,3 +13,21 @@ function pow(num, exponent) {
     }
     return result;
 }
+
+/**
+ * 
+ * @param {number} a is a number
+ * @param {number} b is a number 
+ * @param {number} c is a number
+ * @returns {number} largest of a, b, c
+ */
+ function maxOfThree(a, b, c){ 
+    let max = a
+    if (max < b) {
+        max = b;
+    }
+    if (max < c) {
+        max = c;
+    }
+    return max;
+}
