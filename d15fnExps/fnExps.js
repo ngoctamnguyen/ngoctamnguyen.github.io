@@ -1,12 +1,10 @@
 "use strict";
 
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser
-*/ 
 //module.exports = {double, times100, myMap }; //add all of your function names here that you need for the node mocha tests
 
 /**
- *@param {number} number will be doubled
- *@returns {number} double the input
+ *@param {number} number - the number will be doubled
+ *@returns {number} number - doubled number
  */
 function double(num){
     return 2*num;
@@ -14,8 +12,8 @@ function double(num){
 
 
 /**
- * @param {number} input the number
- * @returns {number} 100 times the input
+ * @param {number} number - input a number
+ * @returns {number} number - 100 times of the inputed number
  */
  function times100(num){
      return 100*num;
@@ -23,9 +21,9 @@ function double(num){
 
 
 /**
- * @param {array} input an array of number
- * @param {function} Calling a function to manipulate the inputed number
- * @returns {Array} creates a new array with function mapped to each element
+ * @param {array} Array - input an array of number
+ * @param {function} Function - Calling function
+ * @returns {Array} Array -  creates a new array with function mapped to each element
  */
  function myMap(arr, func){
     let newArr = [];
