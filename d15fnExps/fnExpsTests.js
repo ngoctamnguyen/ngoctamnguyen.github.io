@@ -38,19 +38,19 @@ describe("100 times of the number", function () {
 });
 
     /* 3.	Write a function, myMap, that takes an array and a function and returns a new array that has the function applied to each element of the input array. */
-    describe("myMap", function () {
+    describe("myMap maps an array  to called function", function () {
         const testArray = [-10, 0, 10, 20];
-        it("tests myMap on double", function () {
+        it("maps the elements of the array to function double", function () {
             assert.deepStrictEqual(myMap(testArray, double), [-20, 0, 20, 40]);
         });
-        it("tests myMap on times100", function () {
+        it("maps the elements of the array to function times100", function () {
             assert.deepStrictEqual(myMap(testArray, times100), [-1000, 0, 1000, 2000]);
         });
     });
 
     /* 4.	Demonstrate your myMap function with an anonymous function that triples the input value.  Write this as an anonymous function expression.  
     Then write it using an arrow expression. */
-    describe("myMap", function () {
+    describe("maps the elements of the array  to anonymous/arrow function", function () {
         const testArray = [-10, 0, 10, 20];
         it("tests myMap on triples anonymous function", function () {
             assert.deepStrictEqual(myMap(testArray,  function(arr) {return 3*arr;}), [-30, 0, 30, 60]);
