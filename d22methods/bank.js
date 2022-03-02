@@ -31,15 +31,32 @@ bank.saveTransaction = function (id, amount) {
 
 bank.debit = function (id, amount) {
     /* make sure current balance is > amount */
-//IMPLEMENT THIS
+    let currentBal = 0;
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+        for (let i=0; i < customer.customerTransactions.length; i++) {
+            currentBal += customer.customerTransactions[i];
+        }
+    if (currentBal < amount) {
+        console.log("Not enough amount");
+    }
+    else {
+        customer.customerTransactions.push(-amount);
+    }
 };
 
 bank.credit = function (id, amount) {
     this.saveTransaction(id, amount);
 };
 
+
 bank.getBalance = function (id) {
 //IMPLEMENT THIS
+    let currentBal = 0;
+    const customer = bank.transactionsDB.find(customer => customer.customerId === id);
+     for (let i=0; i < customer.customerTransactions.length; i++) {
+            currentBal += customer.customerTransactions[i];
+    }
+    return currentBal;
 };
 
 
@@ -48,10 +65,20 @@ bank.getBalance = function (id) {
  * @returns {number}  returns sum of all balances
  */
 bank.bankBalance = function () {
+    let bankBal = 0;
+    for (const customer in bank) {
+        for (let tam in customer) {
+            console.log(tam.customerTransactions);
+            //bankBal += customerBal.customerTransactions;
+        }
+    }
+    return bankBal;
 //IMPLEMENT THIS
 };
 
 
+console.log(bank.bankBalance());
+bank.debit(1,10);
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
