@@ -17,18 +17,18 @@ function Accumulator(currents, increments) {
         this.currentValue = function () {
                 return this.current;
             }
-        this.increment = function () {
-           this.current = this.current + 10;
+        this.accumulate = function() {
+            this.current = this.current + this.increment;
         }
         this.report = function () {
             return this.current;
         }
     }
 
-let Tam = new Accumulator(5,10);
-console.log(Tam.report());
-Tam.increment();
-console.log(Tam.report());
+// let Tam = new Accumulator(5,10);
+// console.log(Tam.report());
+// Tam.increment();
+// console.log(Tam.report());
 
 
 
@@ -39,9 +39,9 @@ console.log(Tam.report());
  * @returns {Calculator} this is a constructor function
  */
  function Calculator() {
-     this.setValue = function(x,y) {
-        this.a = x;
-        this.b = y;
+     this.setValues = function(value,step) {
+        this.a = value;
+        this.b = step;
      }
       this.sum = function() {
         return this.a + this.b;
@@ -52,6 +52,6 @@ console.log(Tam.report());
       }
     }
  
-    let zen = new Calculator();
-    zen.setValue(2,8);
-    console.log(zen.mul());
+    //  let zenzin = new Calculator();
+    // zenzin.setValues(2,8);    
+    //  console.log(zenzin.mul());
