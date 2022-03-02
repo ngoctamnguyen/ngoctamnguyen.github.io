@@ -9,18 +9,28 @@ let library = [
 function findTitles() {
     let titles = [];
     for (let book of library) {
-       titles.push(book.title);
+        for (let key in book) {
+            if (key === "title") {
+                titles.push(book[key]);
+            }
+        }
     }
     return titles.sort();
 }
 
 function addBook(newTitle, newAuthor, newlibraryID){
-    return {
+    // return {
+    //     title: newTitle,
+    //     author: newAuthor,
+    //     libraryID: newlibraryID
+    // };
+    const myBook ={
         title: newTitle,
         author: newAuthor,
         libraryID: newlibraryID
     };
+    library.push(myBook);
 }
-let newbook = addBook("javascript", "Tam",1002)
-library.push(newbook);
+//let newbook = addBook("JScript", "Tam",1002)
+library.push(addBook("JScripts", "nnTam",1002));
 console.log(findTitles());
