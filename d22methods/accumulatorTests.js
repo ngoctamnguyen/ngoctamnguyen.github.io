@@ -38,7 +38,7 @@ describe("accumulator", function () {
 
     it("checks initialValue and increment", function () {
         const accumulator = new Accumulator(5, 10);
-        assert.strictEqual(accumulator.currentValue, 5);
+        assert.strictEqual(accumulator.current, 5);
         assert.strictEqual(accumulator.increment, 10);
     });
 
@@ -46,7 +46,7 @@ describe("accumulator", function () {
         const accumulator = new Accumulator(5, 10);
         accumulator.accumulate();
         accumulator.accumulate();
-        assert.strictEqual(accumulator.currentValue, 25);
+        assert.strictEqual(accumulator.current, 25);
         assert.strictEqual(accumulator.increment, 10);
     });    
 
