@@ -1,10 +1,11 @@
 "use strict";
 /*  comment out the exports when running in the browser */
-//const assert = require("assert");  //always need this with node
-//const myExports = require("./app.js");  //with node need the name of your file with your functions here
-//const findTitles = myExports.findTitles;  //do this for all of the functions used in the Mocha tests
-//const findAuthors = myExports.findAuthors;
-//const findIDs = myExports.findIDs;
+// const assert = require("assert");  //always need this with node
+// const myExports = require("./app.js").default;  //with node need the name of your file with your functions here
+// const findTitles = myExports.findTitles;  //do this for all of the functions used in the Mocha tests
+// const findAuthors = myExports.findAuthors;
+// const findIDs = myExports.findIDs;
+// const addBook = myExports.addBook;
 
 /* global assert findTitles findAuthors findIDs addBook */
 /*
@@ -19,12 +20,12 @@ o	findIDs, which will find all the libraryIDs in libraryBooks and return them in
 
 describe("library", function () {
 
-    //This should be used as the "library database" for testing--included in app.js
-    // let library = [
-    //     { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
-    //     { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
-    //     { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
-    // ];
+ //   This should be used as the "library database" for testing--included in app.js
+    let library = [
+        { title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
+        { title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+        { title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
+    ];
 
     const titles = ["Mockingjay: The Final Book of The Hunger Games", "The Road Ahead", "Walter Isaacson"];
     const authors = ["Bill Gates", "Steve Jobs", "Suzanne Collins"];
@@ -44,9 +45,10 @@ describe("library", function () {
     });
 
     it("add book", function () {
-        const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
+       const newBook = {title: "My New Book", author: "Me Too", libraryID: 1144};
         ids.push(1144);
-        assert.deepEqual(addBook("My New Book",  "Me Too",  1144), newBook);
+        addBook(newBook);
+        assert.deepEqual(addBook("My New Book",  "Me Too",  1144), library);
         assert.deepEqual(findIDs(), ids);
     });
 
