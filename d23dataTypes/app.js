@@ -1,4 +1,7 @@
 "use strict";
+
+const { createWriteStream } = require("fs");
+
 /* eslint-disable */
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
@@ -63,10 +66,10 @@ function getMaxSubSum(arr) {
  * @param {string} 
  * @returns {string} return string that removes all dashes, each word after dash becomes uppercased
  */
-function camelize(str) {
+ function camelize(str) {
     return str
-      .split('-')
-      .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
-      .join('');
+      .split('-') 
+      .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)      )
+      .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
   }
 
