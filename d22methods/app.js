@@ -2,8 +2,9 @@
 
 const { calculator } = require("./calculator");
 
-/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
+/* You need the module.exports when testing in node.  Comment it out when you send your file to the browser
 module.exports = { Accumulator, Calculator }; //add all of your function names here that you need for the node mocha tests
+*/
 
 /**
  * 
@@ -53,5 +54,5 @@ function Accumulator(currents, increments) {
     }
  
     //  let zenzin = new Calculator();
-    // zenzin.setValues(2,8);    
+    //  zenzin.setValues(2,8);    
     //  console.log(zenzin.mul());
