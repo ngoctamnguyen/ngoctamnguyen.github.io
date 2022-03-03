@@ -65,21 +65,22 @@ bank.getBalance = function (id) {
  * @returns {number}  returns sum of all balances
  */
 bank.bankBalance = function () {
-    let bankBal = 0;
-    for (const customer in bank) {
-        for (let tam in customer) {
-            console.log(tam.customerTransactions);
-            //bankBal += customerBal.customerTransactions;
+   let bankBal = 0;
+    for (let i=0; i < bank.transactionsDB.length; i ++) {
+        for (let j=0; j < bank.transactionsDB[i].customerTransactions.length; j++) {
+            bankBal += bank.transactionsDB[i].customerTransactions[j];
         }
     }
     return bankBal;
-//IMPLEMENT THIS
 };
 
 
-console.log(bank.bankBalance());
-bank.debit(1,10);
+//console.log(bank.bankBalance());
+// bank.debit(1,10);
+// bank.credit(1, 20);
+// bank.debit(1, 1000);
+// console.log(bank.bankBalance());
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
-module.exports = {bank }; //add all of your object names here that you need for the node mocha tests
+//module.exports = {bank }; //add all of your object names here that you need for the node mocha tests
