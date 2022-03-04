@@ -66,10 +66,26 @@ function getMaxSubSum(arr) {
  * @param {string} 
  * @returns {string} return string that removes all dashes, each word after dash becomes uppercased
  */
- function camelize(str) {
-    return str
-      .split('-') 
-      .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)      )
-      .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
-  }
+//  function camelize1(str) {
+//     return str
+//       .split('-') 
+//       .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)      )
+//       .join(''); // joins ['my', 'Long', 'Word'] into 'myLongWord'
+//   }
+  function camelize(str) {
+    if (str == "") {
+        return "";
+    }
+    let arr = str.split("-");
+    let newString = "";
+    arr.forEach((item,index) => {
+        if (index == 0 &&  str[0] != "-") {
+            newString += item[0].toLowerCase() + item.slice(1);
+        }
+        else {
+            newString += item[0].toUpperCase() + item.slice(1);
+        }
+    });
+    return newString;
+}
 
