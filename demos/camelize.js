@@ -1,4 +1,3 @@
-"use strict";
 
 function camelize(str) {
     if (str == "") {
