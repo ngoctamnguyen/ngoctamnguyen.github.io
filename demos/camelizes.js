@@ -1,7 +1,8 @@
-function camelize(text, separator = '-') {
+function camelize(text, separator) {
     let words = text.split(separator);
     let result = '';
-  
+    words.sort();
+
     words.forEach((word, index) => {
       if (index === 0) {
         word = word.replace(/./, (letter) => letter.toLowerCase());
@@ -13,5 +14,13 @@ function camelize(text, separator = '-') {
     });
     return result;
   }
-  
-  console.log(camelize("Nguyen-ngoc-tam", separator = '-'));
+
+  function compare(a, b) {
+    a = "" + a;
+    b = "" + b;
+
+    if (a > b) return 1;
+    if (a == b) return 0;
+    if (a < b) return -1;
+    }
+  console.log(camelize("Tex*love*money", separator = '*'));
