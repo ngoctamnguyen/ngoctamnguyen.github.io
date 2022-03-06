@@ -6,7 +6,7 @@
 
 function filterRange(arr,a,b) {
     let newArr = [];
-    arr.forEach(item => {(item >= a && item <= b) ? newArr.push(item) : "";})
+    arr.forEach(item => {if (item >= a && item <= b) newArr.push(item);});
     return newArr;
 }
 
@@ -44,4 +44,8 @@ function filterRange(arr,a,b) {
 
 
   function groupById(array) {
+    return array.reduce((obj, value) => {
+      obj[value.id] = value;
+      return obj;
+    }, {})
   }
