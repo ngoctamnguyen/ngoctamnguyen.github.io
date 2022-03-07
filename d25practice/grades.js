@@ -70,9 +70,8 @@ quiz.getAverage = function(){
     return sum/count;
 }
 console.log(quiz.getAverage());
-//IMPLEMENT THIS
 
 
 
 /* comment out when running in browser */
-module.exports = {quiz}; 
+//module.exports = {quiz}; 
