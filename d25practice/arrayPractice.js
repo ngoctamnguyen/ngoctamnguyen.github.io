@@ -13,16 +13,16 @@ return arr.map(num => num * 2);
 }
 
 function doubleAges(arr){
-    return arr.reduce((obj,item) => obj = {name: item.name, age: item.age*2},{});
-    //  let newArr = [];
-    //  for (const people of arr) {
-    //       newArr.push({name: people.name, ages: people.age * 2});
-    //   }
-    //  return newArr;
+   /* 1. use map*/
+     return arr.map((item) => ({ name: item.name, age: item.age * 2 }));
+     
+    /*2. use for loop*/
+        //  let newArr = [];
+        //  for (const people of arr) {
+        //       newArr.push({name: people.name, ages: people.age * 2});
+        //   }
+        //  return newArr;
 }
-
-console.log(doubleAges(peopleArray));
-console.log(peopleArray);
 
 
 function filterEven(arr){
@@ -43,10 +43,15 @@ function findEvenAge(arr){
 }
 
 
-function includesEvenNum(arr){
+function includesEvenNum(arr) {
 
-}
+    return arr.includes(item => item % 2 ===0);
+  
+  }
+console.log(includesEvenNum(numArray));
 
 function includesEvenAge(arr){
-
+    return arr.includes(item => item.age % 2 === 0);
 }
+
+console.log(includesEvenAge(peopleArray));
