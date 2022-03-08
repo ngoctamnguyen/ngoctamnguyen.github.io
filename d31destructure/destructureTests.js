@@ -31,3 +31,20 @@ describe("topSalary", function() {
       assert.strictEqual( topSalary({}), null);
     });
   });
+
+
+  describe("Object to JSON", function() {
+    it("returns a JSON string", function() {
+      let user = { name: "John Smith",age: 35};
+      assert.deepEqual(objectToJson(user),'{"name":"John Smith","age":35}');
+    });
+  });
+
+
+
+  describe("Json string to object", function() {
+    it("returns an object", function() {
+      const str = '{"name":"John Smith","age":35}';
+      assert.deepEqual(jsonToObject(str),{ name: "John Smith", age: 35});
+    });
+  });
