@@ -51,6 +51,7 @@ function includesEvenNum(arr) {
 console.log(includesEvenNum(numArray));
 
 function includesEvenAge(arr){
+    
     return arr.includes(item => item.age % 2 === 0);
 }
 
