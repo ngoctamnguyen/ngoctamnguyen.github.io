@@ -10,6 +10,7 @@ console.log("[1, 2, 3] use for... of... result is: " + getMaxSubSum([1, 2, 3]));
 function getMaxSubSum1(arr) {
     let sum = 0;
     for (const num in arr) {
+        console.log(num);
         sum += +num;
     }
     return sum;
