@@ -1,7 +1,7 @@
 "use strict";
 /* eslint-disable */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-//module.exports = { topSalary }; //add all of your function names here that you need for the node mocha tests
+//module.exports = { topSalary, objectToJson, jsonToObject }; //add all of your function names here that you need for the node mocha tests
  let salaries = {
      "John": 100,
      "Pete": 300,
@@ -27,3 +27,20 @@ function topSalary(salaries) {
   }
 
   console.log(topSalary(salaries));
+
+
+  function objectToJson(obj){
+    return JSON.stringify(obj);
+  }
+
+  function jsonToObject(str){
+    return JSON.parse(str);
+  }
+  let user = {
+    name: "John Smith",
+    age: 35
+  };
+  let str = '{"name":"John Smith","age":35}';  
+
+  console.log(objectToJson(user),{"name":"John Smith","age":35});
+  console.log(jsonToObject(str));
