@@ -7,23 +7,21 @@
      "Pete": 300,
      "Mary": 250
    };
-
-
-
 function topSalary(salaries) {
 
-   // return Object.keys(salaries).reduce((max, salary) => salaries[max] > salaries[salary] ? max : salary)
-    let maxSalary = 0;
-    let maxName = null;
+    if ( Object.entries(salaries) === 0 ) {
+        return null;
+    }    return Object.keys(salaries).reduce((max, salary) => salaries[max] > salaries[salary] ? max : salary)
+    // let maxSalary = 0;
+    // let maxName = null;
 
-    for(const [name, salary] of Object.entries(salaries)) {
-        if (maxSalary < salary) {
-          maxSalary = salary;
-         maxName = name;
-        }
-      }
-    return maxName;
-   
+    // for(const [name, salary] of Object.entries(salaries)) {
+    //     if (maxSalary < salary) {
+    //       maxSalary = salary;
+    //      maxName = name;
+    //     }
+    //   }
+    // return maxName;
   }
 
   console.log(topSalary(salaries));
@@ -42,5 +40,3 @@ function topSalary(salaries) {
   };
   let str = '{"name":"John Smith","age":35}';  
 
-  console.log(objectToJson(user),{"name":"John Smith","age":35});
-  console.log(jsonToObject(str));
