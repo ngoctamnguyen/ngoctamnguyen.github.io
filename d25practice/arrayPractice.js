@@ -23,7 +23,7 @@ function doubleAges(arr){
         //   }
         //  return newArr;
 }
-
+console.log(doubleAges(peopleArray));
 
 function filterEven(arr){
     return arr.filter(item => item%2 === 0);
@@ -51,7 +51,7 @@ function includesEvenNum(arr) {
 console.log(includesEvenNum(numArray));
 
 function includesEvenAge(arr){
-    
+
     return arr.includes(item => item.age % 2 === 0);
 }
 
