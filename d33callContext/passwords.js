@@ -5,13 +5,11 @@
 
 function askPassword(ok, fail, password) {
   let pass = 'rockstar';
-  let returnAns = '';
   if (pass === password) {
-      returnAns = ok();
+      return ok;
   } else {
-      returnAns = fail();
+      return fail;
   }
-  return returnAns;
 }
 
 let user = {
@@ -27,27 +25,20 @@ let user = {
 
 };
 
-let test = askPassword(user.loginOk.bind(user), user.loginFail.bind(user), 'rockstar');
+let test = askPassword(user.loginOk.call(user), user.loginFail.call(user), 'rokstar');
 console.log(test);
-
-
-
-
 
 function askPassword2(ok, fail, password) {
   let pass = 'rockstar';
-  let returnAns = '';
   if (pass === password) {
-      returnAns = ok();
+      return ok();
   } else {
-      returnAns = fail();
+      return fail();
   }
-  return returnAns;
 }
 
 let user2 = {
   name : 'John',
-  
   login : function(answer) {
     if (answer) {
       return this.name + ' logged in';
@@ -58,10 +49,6 @@ let user2 = {
 };
 
 //askPassword2(() => user2.login(true), () => user2.login(false), 'rocstar');
-
-
-
-
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
