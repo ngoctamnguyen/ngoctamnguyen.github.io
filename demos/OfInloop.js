@@ -5,7 +5,7 @@ function getMaxSubSum(arr) {
     }
     return sum;
 }
-console.log("[1, 2, 3] use for... of... result is: " + getMaxSubSum([1, 2, 3]));
+console.log("[1, 2, 3] use for... of... result is: " + getMaxSubSum([1, 2, 3])); //6
 
 function getMaxSubSum1(arr) {
     let sum = 0;
@@ -15,4 +15,4 @@ function getMaxSubSum1(arr) {
     }
     return sum;
 }
-console.log("[1, 2, 3] use for... in... result is: " + getMaxSubSum1([1, 2, 3]));
+console.log("[1, 2, 3] use for... in... result is: " + getMaxSubSum1([1, 2, 3])); //3
