@@ -29,6 +29,7 @@ console.log("expect 48: ", multiplyEvens(1, 6, 3, 4, 17, 2));
 function multiplyEvens(...args){
     let prod = 1;
     for (const arg of args){
+        console.log(arg);
         if (arg % 2 === 0) {         
             prod = prod * arg;
         }
