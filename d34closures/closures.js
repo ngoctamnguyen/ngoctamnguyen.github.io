@@ -45,13 +45,16 @@ function byField(fieldName){
 function makeArmy() {
     let shooters = [];
 
-  for(let i = 0; i < 10; i++) {
-    let shooter = function() { // shooter function
-      return i; // should show its number
-    };
+    let i = 0;
+    while (i < 10) {
+      let j = i;
+      let shooter = function() { 
+        console.log("I am shooter ", j); 
+        return j;
+      };
     shooters.push(shooter);
+    i++;
   }
-
    return shooters;
   }
 
