@@ -23,15 +23,17 @@ function doubleAges(arr){
         //   }
         //  return newArr;
 }
-console.log(doubleAges(peopleArray));
+//console.log(doubleAges(peopleArray));
 
 function filterEven(arr){
-    return arr.filter(item => item%2 === 0);
+    return arr.filter(item => item % 2 === 0);
 }
+//console.log(filterEven(numArray));
 
 function filterOver10(arr) {
     return arr.filter((item) => item.age > 10);
 }
+//console.log(filterOver10(peopleArray));
 
 function findEvenNum(arr){
     return arr.find(item => item % 2 === 0);
@@ -39,20 +41,19 @@ function findEvenNum(arr){
 console.log(findEvenNum(numArray));
 
 function findEvenAge(arr){
-    return arr.find((item) => (item.age % 2) === 0);
+    return arr.find((item) => item.age % 2 === 0);
 }
-
+//console.log(findEvenAge(peopleArray));
 
 function includesEvenNum(arr) {
-
     return arr.includes(item => item % 2 ===0);
   
   }
-console.log(includesEvenNum(numArray));
+//console.log(includesEvenNum(numArray));
 
 function includesEvenAge(arr){
-
-    return arr.includes(item => item.age % 2 === 0);
+    const   ages = peopleArray.map(item => item.age);
+    return ages.includes(15);
 }
 
-console.log(includesEvenAge(peopleArray));
+//console.log(includesEvenAge(peopleArray));
