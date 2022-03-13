@@ -26,10 +26,10 @@ function Accumulator(currents, increments) {
         }
     }
 
-// let Tam = new Accumulator(5,10);
-// console.log(Tam.report());
-// Tam.increment();
-// console.log(Tam.report());
+let Tam = new Accumulator(5,10);
+console.log(Tam.report());
+Tam.increment();
+console.log(Tam.report());
 
 
 
