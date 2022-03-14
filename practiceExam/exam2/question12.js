@@ -18,23 +18,23 @@ console.log(jerseyNum(teamStats));
 //[ 8, 12, 6 ]
 
 function sumPoint(arr) {
-    const player3Total = player3.stats.reduce((sum,statpoint) => sum + statpoint, 0);
+    const player3Total = player3.stats.reduce((sum,statpoint) => sum + statpoint.points, 0);
     console.log(player3Total);
 }
 sumPoint(teamStats);
-//0[object Object][object Object]
+//16
 
 
-function findHighScores(teamstataArr) {
+function findHighScores(teamstatsArr) {   //find high score of each stat
     const highscores = [];
-    for (const player of teamstataArr) {
+    for (const player of teamstatsArr) {
         const stats = player.stats;
         const highscore = stats.reduce((max,current) => Math.max(max, current.points),0);
         highscores.push({jersey: player.jersey, high: highscore});
     }
     return highscores
 }
-//console.log(findHighScores(teamStats));
+console.log(findHighScores(teamStats));
 // [
 //     { jersey: 8, high: 7 },
 //     { jersey: 12, high: 16 },
@@ -49,7 +49,7 @@ function orderHighScores(teamstataArr) {
 function highScoreComperator(playerA, playerB) {
     return playerB.high - playerA.high;
 }
-//console.log(orderHighScores(teamStats));
+console.log(orderHighScores(teamStats));
 // [
 //     { jersey: 12, high: 16 },
 //     { jersey: 6, high: 10 },
