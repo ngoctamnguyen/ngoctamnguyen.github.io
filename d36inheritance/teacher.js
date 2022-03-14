@@ -18,7 +18,7 @@ Person.prototype.describe = function(){
 const Student = function() {};
 Student.prototype = new Person();
 
-Student.prototype.learn = function(subject){
+Student.prototype.learn = function(subject){   //add new prototype for student
     return (this.name + " just learned " + subject);
 };
 
@@ -26,7 +26,7 @@ Student.prototype.learn = function(subject){
 const Teacher = function() {};
 Teacher.prototype = new Person();
 
-Teacher.prototype.teach = function(subject) {
+Teacher.prototype.teach = function(subject) {    //add teach prototype for teahcer
     return (this.name + " is now teaching " + subject);
 };
 
