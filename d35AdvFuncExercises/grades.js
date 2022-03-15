@@ -20,8 +20,9 @@ The answer arrays might not have the questions in the same order.  Write a funct
 
 const quiz = {};
 quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
-{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
-{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+                 { sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+                 { sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+
 quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
 
 /**
@@ -38,7 +39,6 @@ function answerComparator(ans1, ans2) {
         }
     }
     return sum;
-//IMPLEMENT THIS
 }
 
 /**
@@ -50,10 +50,9 @@ function answerComparator(ans1, ans2) {
  * compare them against key and add up matches
  */
 quiz.scoreStudent = function (sid) {
-    let student = quiz.students.find(item => item.sid === sid);
-    student.answers.sort(function(a,b) {return a.qid-b.qid;})
-    return answerComparator(quiz.key, student.answers);
-//IMPLEMENT THIS
+    let student = quiz.students.find(item => item.sid === sid); //return student has sid
+    student.answers.sort(function(a,b) {return a.qid-b.qid;})   //sort ascending by sid of student was found
+    return answerComparator(quiz.key, student.answers);         //compare with key to caculate sum score of student
 };
 
 /**
@@ -63,9 +62,9 @@ quiz.scoreStudent = function (sid) {
 quiz.getAverage = function(){
     let sum = 0;
     let count = 0;
-    for (const student of this.students) {
+    for (const student of this.students) {   //go through each student
         count++;
-        sum += this.scoreStudent(student.sid);
+        sum += this.scoreStudent(student.sid);   //get score of each student added to sum
     }
     return sum/count;
 //IMPLEMENT THIS
