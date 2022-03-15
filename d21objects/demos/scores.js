@@ -24,9 +24,6 @@ const student3 = {
 
 const quiz = [student1, student2, student3];
 
-for (const prop of quiz) {
-    console.log(numbers[prop]);
-}
 
 /**
  * 
